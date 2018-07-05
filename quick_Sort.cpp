@@ -3,6 +3,7 @@ using namespace std;
 void quickSort(int a[],int low,int high);
 int partition(int a[],int low,int high);
 void print(int [], int);
+void add(int []);
 int main()
 {
 	int ar[7];
@@ -14,7 +15,7 @@ int main()
 	quickSort(ar,0,6);
 	cout<<"Sorted array: "<<endl;
 	print(ar,7);
-
+	add(ar);
 	return 0;
 		
 }
@@ -57,4 +58,13 @@ void print(int ar[],int size)
 	{
 		cout<<ar[i]<<endl;
 	}
+}
+void add(int ar[])
+{
+	int sum=0;
+	for(int i=0;i<7;i++)
+	{
+		sum+=ar[i];
+	}
+	cout<<"Sum of the elements is : "<<sum<<endl;
 }
